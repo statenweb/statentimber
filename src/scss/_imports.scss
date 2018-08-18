@@ -1,0 +1,13 @@
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1040px
+) !default;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
