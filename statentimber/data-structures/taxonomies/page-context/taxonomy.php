@@ -7,9 +7,7 @@ class Taxonomy {
     const TAXONOMY = 'sw-page-context';
     protected static $post_types = [ 'page' ];
     protected static $types = [
-        [ 'name' => 'Brown Text', 'slug' => 'brown-text' ],
-        [ 'name' => 'Brown Background, White Text', 'slug' => 'brown-background-white-text' ],
-        [ 'name' => 'White Background, Brown Text', 'slug' => 'white-background-brown-text' ],
+
 
     ];
 
@@ -80,13 +78,13 @@ class Taxonomy {
 
     public function timber_context( $context ) {
 
-        if ( !is_admin() && is_page() ) {
-            $slugs = (array)Helpers::get_page_context_slugs();
+        if ( ! is_admin() && is_page() ) {
+            $slugs = (array) Helpers::get_page_context_slugs();
 
 
-            $slugs = array_reduce($slugs, function($carry, $item){
+            $slugs                  = array_reduce( $slugs, function ( $carry, $item ) {
                 return $carry . ' ' . $item . ' ';
-            }, '');
+            }, '' );
             $context['title_style'] = $slugs;
         }
 
